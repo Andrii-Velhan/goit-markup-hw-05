@@ -55,11 +55,13 @@ img {
 
 .hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -175,8 +177,8 @@ img {
 } */
 
 .icon-smart {
-  width: 10px;
-  height: 14.94px;
+  /* width: 10px;
+  height: 14.94px; */
   margin-right: 10px;
   fill: var(--color2, #757575);
   outline: 1px solid red;
@@ -184,8 +186,8 @@ img {
 
 .icon-mail {
   /* width="16" height="11.2" */
-  width: 16px;
-  height: 11.2px;
+  /* width: 16px;
+  height: 11.2px; */
   margin-right: 10px;
   fill: var(--color2, #757575);
   outline: 1px solid red;
@@ -521,8 +523,8 @@ header .link:focus {
 }
 
 .social-icon {
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
   fill: var(--color1, #afb1b8);
 }
 
@@ -642,6 +644,7 @@ header .link:focus {
   color: var(--dark-main-color);
   background: var(--background-primary-gray);
   padding: 6px 22px;
+  border: none;
   border-radius: 4px;
   overflow: hidden;
   border: 0;
@@ -655,15 +658,24 @@ header .link:focus {
 }
 
 /* Наши клиенты */
+.card-image-container {
+  position: relative;
+}
+
+.info-overlay {
+  opacity: 0;
+  max-height: 100%;
+}
+
+.card:hover .info-overlay,
+.card:focus .info-overlay {
+  opacity: 1;
+}
+
 .card:hover,
 .card:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
-}
-
-.info-overlay {
-  display: inline-block;
-  margin: 63px 24px;
 }
 
 .card-title h2,
@@ -716,7 +728,15 @@ header .link:focus {
   color: var(--text-color);
 }
 
-.clients-list .info-overlay {
+.info-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: inline-block;
+  padding: 63px 24px;
+  margin: 0;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -824,8 +844,8 @@ footer {
 }
 
 .social-icon-fr {
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
   fill: var(--color1, #ffffff);
 }
 
