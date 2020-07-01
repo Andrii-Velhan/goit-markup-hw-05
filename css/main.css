@@ -648,6 +648,7 @@ header .link:focus {
   border-radius: 4px;
   overflow: hidden;
   border: 0;
+  outline-width: 0px;
 }
 
 .filters button:hover,
