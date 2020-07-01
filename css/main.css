@@ -333,20 +333,30 @@ header .link:focus {
   background-image: url(../images/astronaut.svg);
 }
 /* Чем мы занимаемся */
+.employment-item {
+  position: relative;
+}
+
+.employments-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 
 .employments {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0 0 0;
+  margin: 0;
 }
 
 .employments-container {
   padding-bottom: 94px;
 }
 
-.employments-container h2 {
+.employments-title {
   display: block;
-  margin: 0;
+  margin: 0 0 50px 0;
 
   font-weight: 700;
   font-size: 36px;
@@ -356,7 +366,7 @@ header .link:focus {
   color: var(--dark-main-color);
 }
 
-.employments h3 {
+.employments-name {
   margin: 0;
   /* тимчасово */
   height: 70px;
@@ -433,7 +443,7 @@ header .link:focus {
 
 .team-title {
   display: block;
-  margin: 0;
+  margin: 0 0 50px 0;
 
   font-weight: 700;
   font-size: 36px;
@@ -452,7 +462,7 @@ header .link:focus {
 .team-items {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0 0 0;
+  margin: 0;
 }
 
 .team-items > li + li {
