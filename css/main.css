@@ -202,7 +202,7 @@ fill="var(--color2, #757575)"  */
 header .link:hover,
 header .link:focus {
   color: var(--accent-color);
-  outline-width: 0px;
+  /* outline-width: 0px; */
   --color2: var(--accent-color);
 }
 /* .icon {
@@ -842,6 +842,11 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-address a:hover,
+.footer-address a:focus {
+  cursor: url(../images/finger.svg), pointer;
+}
+
 .join {
   height: 41%;
   margin-left: 69px;
@@ -885,6 +890,7 @@ footer {
 
 .sl-fr a {
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* color1: #ffffff; */
 }
 
@@ -909,8 +915,42 @@ footer {
   outline: 1px solid aqua;
 }
 
-.subscribe button:hover,
-.subscribe button:focus {
+.subscribe b {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 10px;
+}
+
+.subscribe-button {
+  /* width: 109px;
+  height: 30px; */
+  padding: 10px 62px 10px 29px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  /* identical to box height, or 187% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  /* Вигляд кнопки змінити, коли форму врозмітимо */
+  color: var(--primary-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   outline-width: 0px;
